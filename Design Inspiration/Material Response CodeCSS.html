@@ -1,0 +1,134 @@
+<xmp>
+
+
+
+.site-wrapper {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: center;
+}
+h1 {
+  position: relative;
+  z-index: 200;
+  font-weight: 300;
+  font-size: 3em;
+  color: #333;
+  margin: 0;
+  line-height: 85px;
+  margin-left: 15px;
+  margin-bottom: 50px;
+}
+h3 {
+  margin-top: 45px;
+  font-weight: 300;
+}
+
+.section {
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  width: 300px;
+  height: 85px;
+  border: 1px solid #dddddd;
+  background: #ffffff;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.4);
+}
+.response-layer {
+  transition: all 0.05s ease-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  background: #f5f5f5;
+  border-radius: 500px;
+  opacity: 0;
+}
+span.browser {
+  display: inline-block;
+  margin-right: 15px;
+  color: #adadad;
+}
+span.browser:last-child {
+  margin-right: 0;
+}
+span.hero {
+  color: green;
+}
+span.medium {
+  color: red;
+}
+
+.clicked {
+  -webkit-animation: event 1.4s;
+          animation: event 1.4s;
+}
+.clicked .response-layer {
+  -webkit-animation: response 1.6s;
+          animation: response 1.6s;
+}
+@-webkit-keyframes event {
+  0% {
+    box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.4);
+  }
+  20% {
+    box-shadow: 0px 9px 14px 0px rgba(50, 50, 50, 0.6);
+  }
+  100% {
+    box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.4);
+  }
+}
+@keyframes event {
+  0% {
+    box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.4);
+  }
+  20% {
+    box-shadow: 0px 9px 14px 0px rgba(50, 50, 50, 0.6);
+  }
+  100% {
+    box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.4);
+  }
+}
+@-webkit-keyframes response {
+  16% {
+    opacity: 1;
+  }
+  32% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+    -webkit-transform: scale(10);
+            transform: scale(10);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes response {
+  16% {
+    opacity: 1;
+  }
+  32% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+    -webkit-transform: scale(10);
+            transform: scale(10);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+</xmp>

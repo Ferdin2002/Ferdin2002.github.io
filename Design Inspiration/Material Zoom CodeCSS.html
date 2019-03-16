@@ -1,0 +1,116 @@
+<xmp>
+
+.loading {
+  position:absolute;
+  height:100%;
+  width:100%;
+  background:#26A69A;
+  z-index:11;
+  animation:fadeout 0.5s forwards 1s;
+}
+.item {
+  float:left;
+  overflow:hidden;
+  position:absolute;
+}
+.inner {
+  margin: auto;
+  height:90%;
+  width:90%;
+  cursor:pointer;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  opacity:0;
+  animation:fadein 0.5s forwards 2s;
+}
+.loading > .inner {
+  opacity:1;
+}
+.loading > .inner > .ellipsis::after{
+   content: '.';
+   font-size: 1em;
+   color: transparent;
+   animation: ellipsis .75s steps(3) 5;
+}
+
+.border { 
+  background:#333;
+  position:absolute;
+  transition:all 0.2s ease;
+}
+
+/* Items */
+.item:nth-child(5){
+  z-index:7;
+  right:0;
+  top:35%;
+  left:37%;
+  background:violet;
+  width:25%;
+  height:25%;
+  animation: slidein4 0.4s forwards 1.8s;
+}
+
+
+/* Animations */
+/* "Authentic Motion" */
+@keyframes slidein5 {
+  0% {width:25%;}
+  100% {width:12.5%;}
+}
+@keyframes fadeout {
+  0% {opacity:1;background:#26A69A;}
+  50% {background:#4DB6AC;} /* Fade lighter: #00897B */
+  99% {height:100%;width:100%;opacity:0;}
+  100% {height:0;width:0;opacity:0;} 
+}
+@keyframes fadein {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+@keyframes ellipsis {
+    0%   {color: transparent; text-shadow: none;}
+    1%   {color: #333; text-shadow: .5em 0 0 transparent, 1em 0 0 transparent;}
+    26%  {color: black; text-shadow: .5em 0 0 transparent, 1em 0 0 transparent;}
+    51%  {color: black; text-shadow: .5em 0 0 black, 1em 0 0 transparent;}
+    76%  {color: black; text-shadow: .5em 0 0 black, 1em 0 0 black;}
+    100% {color: black; text-shadow: .5em 0 0 black, 1em 0 0 black;}
+}
+
+/* Borders */
+.item > .border:nth-child(2) {
+  width:20px;
+  height:100%;
+  left:-20px;
+}
+.item > .border:nth-child(3) {
+  width:20px;
+  height:100%;
+  right:-20px;
+}
+.item > .border:nth-child(4) {
+  width:100%;
+  height:20px;
+  top:-20px;
+}
+.item > .border:nth-child(5) {
+  width:100%;
+  height:20px;
+  bottom:-20px;
+}
+
+/* Border Animation */
+.item:hover > .border:nth-child(2){
+  left:0;
+}
+.item:hover > .border:nth-child(3) {
+  right:0;
+}
+.item:hover > .border:nth-child(4) {
+  top:0;
+}
+.item:hover > .border:nth-child(5) {
+  bottom:0;
+}
+
+</xmp>
